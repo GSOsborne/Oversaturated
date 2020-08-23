@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3034693676624961392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3034693676624961395}
+  - component: {fileID: 3034693676624961394}
+  - component: {fileID: 3034693676624961393}
+  m_Layer: 0
+  m_Name: MiscellanySpawnerYellow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3034693676624961395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034693676624961392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3034693676624961394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034693676624961392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19854da83e6c4d99a6c42c3c7df5161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 7530954695348256400, guid: 42584f51640016b4abaaf032e9292bae, type: 3}
+  - {fileID: 7760016412884794406, guid: 1a0cb9a8711f6584591c6c19d12d82aa, type: 3}
+  - {fileID: 4883563391096564824, guid: 9cd61b0995630b54c860d49127227289, type: 3}
+  - {fileID: 3825445851269175190, guid: c69eeadcba3339149983f3baf0db669a, type: 3}
+  - {fileID: 935838301064747873, guid: 368503845c4dd914c8e1685941b2b37a, type: 3}
+  - {fileID: 4545066006294647091, guid: a8c70a5cbf316084aa0717ab1eaa3ea0, type: 3}
+  - {fileID: 935838301064747873, guid: 368503845c4dd914c8e1685941b2b37a, type: 3}
+  - {fileID: 6607538205719767778, guid: bc9daf40410312142a5d8473651f6fac, type: 3}
+  - {fileID: 935838301064747873, guid: 368503845c4dd914c8e1685941b2b37a, type: 3}
+  spawnRate: 30
+  spawnRateRandomness: 1
+  distribution: 2
+  sphereRadius: 30
+  boxSize: {x: 0, y: 0, z: 0}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  randomRotation: 1
+  parent: {fileID: 0}
+--- !u!114 &3034693676624961393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034693676624961392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b582a80fdf012054fb02efa9ad3078d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropColor: 4

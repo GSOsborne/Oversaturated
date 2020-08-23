@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3034693676624961392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3034693676624961395}
+  - component: {fileID: 3034693676624961394}
+  - component: {fileID: 3034693676624961393}
+  m_Layer: 0
+  m_Name: MiscellanySpawnerBlue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3034693676624961395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034693676624961392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3034693676624961394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034693676624961392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19854da83e6c4d99a6c42c3c7df5161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 970139133621567730, guid: d43798905f37e7245ae4f917e80b653f, type: 3}
+  - {fileID: 6379737581362834968, guid: 6847d76a63244144c9d08e97cdb66f74, type: 3}
+  - {fileID: 8305395992383644545, guid: ae567d0cc11bfbe40a6d8a42f8b25678, type: 3}
+  - {fileID: 2767152759027232731, guid: 4268d3c97d729664f8c6231f0372c84f, type: 3}
+  - {fileID: 7347153036121027710, guid: 7cc11c5c8b9d58c41a186d41bb5f2909, type: 3}
+  - {fileID: 8795756509681811887, guid: 20d96c7cc38848b4dba60dcb102c0f11, type: 3}
+  - {fileID: 4865818778002176974, guid: 324cd75bfaccb784e87246b05d3ccbb2, type: 3}
+  spawnRate: 30
+  spawnRateRandomness: 1
+  distribution: 2
+  sphereRadius: 30
+  boxSize: {x: 0, y: 0, z: 0}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  randomRotation: 1
+  parent: {fileID: 0}
+--- !u!114 &3034693676624961393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034693676624961392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b582a80fdf012054fb02efa9ad3078d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropColor: 1

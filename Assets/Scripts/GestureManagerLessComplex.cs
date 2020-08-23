@@ -48,7 +48,7 @@ public class GestureManagerLessComplex : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(leftHand.Velocity.magnitude > windupTriggerVelocity || rightHand.Velocity.magnitude > windupTriggerVelocity)
+        if(leftHand.velocity.magnitude > windupTriggerVelocity || rightHand.velocity.magnitude > windupTriggerVelocity)
         {
             if (!recentlyTriggered)
             {

@@ -12,14 +12,502 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc4ce93088bb447192bc9da8bf2b2a7, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 0672e69a915a5440a1c598b779555317
+    GuidInternal: 
+    m_lastTime: -8586409024631826780
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b18c143e79f6bf40ba18c5a5bfd44212
+    GuidInternal: 
+    m_lastTime: -8586299838899902661
+    List:
+    - name: AllMusicBus
+      guid: 3a265e89ee00004db18885ad7b190fc7
+      id: 4097470015
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ReatkionBus
+        ObjectType: 2
+      - ElementName: AllMusicBus
+        ObjectType: 1
+      Path: Default Work Unit\ReatkionBus\AllMusicBus
+    - name: KickBus
+      guid: aff7cc205e0b4f40875859afde7c27f2
+      id: 4216779515
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ReatkionBus
+        ObjectType: 2
+      - ElementName: KickBus
+        ObjectType: 1
+      Path: Default Work Unit\ReatkionBus\KickBus
+    - name: Melody1Bus
+      guid: 61c9adbb721dc945b59740de1eb294c4
+      id: 496130180
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ReatkionBus
+        ObjectType: 2
+      - ElementName: Melody1Bus
+        ObjectType: 1
+      Path: Default Work Unit\ReatkionBus\Melody1Bus
+    - name: Melody2Bus
+      guid: 08675ca93d33334caf7de605f3eceff4
+      id: 3041576765
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ReatkionBus
+        ObjectType: 2
+      - ElementName: Melody2Bus
+        ObjectType: 1
+      Path: Default Work Unit\ReatkionBus\Melody2Bus
+    - name: SnareBus
+      guid: 9ff8598a9d153b468e1ba9d94b57e265
+      id: 2475170610
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ReatkionBus
+        ObjectType: 2
+      - ElementName: SnareBus
+        ObjectType: 1
+      Path: Default Work Unit\ReatkionBus\SnareBus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 738c61d410533f4c85ac26c0c78f7d46
+    GuidInternal: 
+    m_lastTime: -8586409024631986342
+    List:
+    - name: FourStatesFunctionality
+      guid: 72e9bf0c16fa1b49b282e110bf565073
+      id: 1313868608
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FourStatesFunctionality
+        ObjectType: 7
+      Path: Default Work Unit\FourStatesFunctionality
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 399a25da15f4bf4693f6a09e91463a87
+    GuidInternal: 
+    m_lastTime: -8586169675731486482
+    List:
+    - name: DropPlay
+      guid: 999024f017b4d4419747317de644d28e
+      id: 2019896904
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: DropPlay
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\DropPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: DropStinger
+      guid: 634d4c508640304eb72e509bb3e8c0c9
+      id: 4024232476
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: DropStinger
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\DropStinger
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: FillerMeasure
+      guid: 056f471b75950a4aa21465e38ce3ae7c
+      id: 2441290961
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: FillerMeasure
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\FillerMeasure
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: GruvPlay
+      guid: f3ed88c13505874790f6da08a07a6558
+      id: 1131816737
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: GruvPlay
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\GruvPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: QuitRiserLeadIn
+      guid: 28120e0b0a4ccc40af93a1bf494fbbd3
+      id: 4155412876
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: QuitRiserLeadIn
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\QuitRiserLeadIn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: RiserStart
+      guid: a1f037f68181f34498ad8d7a16c05690
+      id: 3422890556
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: RiserStart
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\RiserStart
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StartLevel
+      guid: 0734d7b9df7dc947b9948f268c66251f
+      id: 3385657599
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: StartLevel
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\StartLevel
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StopSong
+      guid: b93925c3b8c36d4a9d66848768692359
+      id: 3341952226
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: StopSong
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\StopSong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: WindupTrigger
+      guid: 92a1bab14b8eab4a8608bcc4392d54d4
+      id: 885194960
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: WindupTrigger
+        ObjectType: 3
+      Path: Default Work Unit\MusicEvents\WindupTrigger
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 721ec8b55018bc4e9c7d9b2093630762
+    GuidInternal: 
+    m_lastTime: -8586345801666272491
+    List:
+    - name: AllMusicRTPC
+      guid: c2cf21269c8aeb45b65d797b44dd99ad
+      id: 2314582350
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: AllMusicRTPC
+        ObjectType: 13
+      Path: Default Work Unit\AllMusicRTPC
+    - name: DSP_1
+      guid: 4ccc3290a309784f808b19ceac17454b
+      id: 132540678
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DSP_1
+        ObjectType: 13
+      Path: Default Work Unit\DSP_1
+    - name: DSP_2
+      guid: 3642d0f01896c340b0c9fefc62599dfe
+      id: 132540677
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DSP_2
+        ObjectType: 13
+      Path: Default Work Unit\DSP_2
+    - name: DSP_3
+      guid: c1c6ce29e884ed459ecaecfe706a6b3d
+      id: 132540676
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DSP_3
+        ObjectType: 13
+      Path: Default Work Unit\DSP_3
+    - name: KickRTPC
+      guid: ff2d154ee6a35742aa656591d04b4af5
+      id: 3622493090
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: KickRTPC
+        ObjectType: 13
+      Path: Default Work Unit\KickRTPC
+    - name: Melody1RTPC
+      guid: 9543e0bb4fb62249a9d8316590311b2a
+      id: 3730242895
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Melody1RTPC
+        ObjectType: 13
+      Path: Default Work Unit\Melody1RTPC
+    - name: Melody2RTPC
+      guid: 447108045216c243bb3890d9ced4fd50
+      id: 3141287152
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Melody2RTPC
+        ObjectType: 13
+      Path: Default Work Unit\Melody2RTPC
+    - name: SnareRTPC
+      guid: 61817ee479f3a141af63ee2ce4a6e46e
+      id: 3125333929
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SnareRTPC
+        ObjectType: 13
+      Path: Default Work Unit\SnareRTPC
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 48f26f43d7941b408914ba3796133f1d
+    GuidInternal: 
+    m_lastTime: -8586382889518399846
+    List:
+    - name: DropColor
+      guid: e7ef2abbe9d9e24b8b409ec34c4bddb0
+      id: 3551428531
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DropColor
+        ObjectType: 9
+      Path: Default Work Unit\DropColor
+      values:
+      - name: Blue
+        guid: 96e9182b35a11e46b62e48061fbe4fb0
+        id: 1325827433
+        PathAndIcons:
+        - ElementName: Blue
+          ObjectType: 8
+      - name: Green
+        guid: f4059a6342331c41a5d5c044fcd3aefd
+        id: 4147287986
+        PathAndIcons:
+        - ElementName: Green
+          ObjectType: 8
+      - name: None
+        guid: 4a990295d1d6cd468c4a1e860bc222a1
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Orange
+        guid: 391b2a7e4c7a6d4fa6cb2377f5d97ffb
+        id: 1362796839
+        PathAndIcons:
+        - ElementName: Orange
+          ObjectType: 8
+      - name: Purple
+        guid: e286afe5a61853489562fb994f688247
+        id: 3036078039
+        PathAndIcons:
+        - ElementName: Purple
+          ObjectType: 8
+      - name: Red
+        guid: e02158336e28b546be640cc95f04c69c
+        id: 980603538
+        PathAndIcons:
+        - ElementName: Red
+          ObjectType: 8
+      - name: Yellow
+        guid: 19eecf69432fbf4a97e0aca1c4fbc06a
+        id: 2774173721
+        PathAndIcons:
+        - ElementName: Yellow
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: DSPActive
+      guid: 8c901f9bed4f5c42b05454945bff44c1
+      id: 2604525308
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DSPActive
+        ObjectType: 9
+      Path: Default Work Unit\DSPActive
+      values:
+      - name: DSPOff
+        guid: c12dbc9e8ea154409a09c6b89a2ae7d5
+        id: 2704169237
+        PathAndIcons:
+        - ElementName: DSPOff
+          ObjectType: 8
+      - name: DSPOn
+        guid: 80528c89cb921640b851cd855e9ec57a
+        id: 937866409
+        PathAndIcons:
+        - ElementName: DSPOn
+          ObjectType: 8
+      - name: None
+        guid: 91188a1ee9de524b851e28b0aee302de
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: FourStatesGroup
+      guid: 85787055e13c00488b3fe29297c72d51
+      id: 1372880300
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FourStatesGroup
+        ObjectType: 9
+      Path: Default Work Unit\FourStatesGroup
+      values:
+      - name: Drop
+        guid: 0a7e4820b8f9154a803db252f2f5c294
+        id: 1878686274
+        PathAndIcons:
+        - ElementName: Drop
+          ObjectType: 8
+      - name: Filler
+        guid: 617358e53f8ae149aba0397eb79c2d05
+        id: 1735970859
+        PathAndIcons:
+        - ElementName: Filler
+          ObjectType: 8
+      - name: Gruv
+        guid: 0cdc02df503d9f4ca37ff080608dd069
+        id: 1107852279
+        PathAndIcons:
+        - ElementName: Gruv
+          ObjectType: 8
+      - name: None
+        guid: 318796b49a3edd4a86a13c8ac5bd6bb8
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Risers
+        guid: 2d65a26f59414148b098d6259c3fadd5
+        id: 520753915
+        PathAndIcons:
+        - ElementName: Risers
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: GrooveType
+      guid: a8550c47a21a4d4695f6ad2868d95477
+      id: 3055438891
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GrooveType
+        ObjectType: 9
+      Path: Default Work Unit\GrooveType
+      values:
+      - name: Flow
+        guid: 1504ef27135b2a489fce6b07b1df7191
+        id: 3032049369
+        PathAndIcons:
+        - ElementName: Flow
+          ObjectType: 8
+      - name: Intro
+        guid: 5f392b443fced84a9c48ce05a274ae61
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: Intro
+          ObjectType: 8
+      - name: None
+        guid: d019aa2d64f8094486a2af05b3e9643f
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: a44c56af902574438ec58824b696791e
+    GuidInternal: 
+    m_lastTime: -8586315577508405755
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 9f2c957941ad2a479d0054bd75cbf1c4
+    GuidInternal: 
+    m_lastTime: -8586169675668457206
+    List:
+    - name: DropStinger
+      guid: b22c48e9f10b2d4db7e4434791464661
+      id: 4024232476
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DropStinger
+        ObjectType: 14
+      Path: Default Work Unit\DropStinger
+    - name: WindupMeasure
+      guid: a9f11eaa214717449678a6cd330f97d9
+      id: 671359740
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WindupMeasure
+        ObjectType: 14
+      Path: Default Work Unit\WindupMeasure
   ExpandedItems: []
   autoPopulateEnabled: 1
-  CurrentPluginConfig: 
+  CurrentPluginConfig: Profile

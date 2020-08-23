@@ -56,19 +56,19 @@ public class GestureManager : MonoBehaviour
 
         IGestureType returnGesture = null;
 
-        if (leftHand.Velocity.magnitude >= minimumVelocity)
+        if (leftHand.velocity.magnitude >= minimumVelocity)
         {
-            velocity = leftHand.Velocity;
-            ray = new Ray(leftHand.HandPosition, velocity);
+            velocity = leftHand.velocity;
+            ray = new Ray(leftHand.handPosition, velocity);
             returnGesture = RetrieveGesture();
         }
 
         if (returnGesture == null || returnGesture.Equals(EmptyGesture))
         {
-            if (rightHand.Velocity.magnitude >= minimumVelocity)
+            if (rightHand.velocity.magnitude >= minimumVelocity)
             {
-                velocity = rightHand.Velocity;
-                ray = new Ray(rightHand.HandPosition, velocity);
+                velocity = rightHand.velocity;
+                ray = new Ray(rightHand.handPosition, velocity);
                 returnGesture = RetrieveGesture();
             }
             else

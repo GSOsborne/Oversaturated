@@ -20,13 +20,22 @@ public class WindupManager : MonoBehaviour
             throw new System.Exception("No StereoRail_AudioManager instance found by WindupManager");
         }
         StereoRail_AudioManager.NewMeasureEvent += OnNewMeasure;
+        StereoRail_AudioManager.StopSongEvent += ResetFirstMeasureBool;
         dropLengthHasBeenReset = false;
         firstMeasureOfRiser = true;
+        
     }
 
     private void OnDestroy()
     {
         StereoRail_AudioManager.NewMeasureEvent -= OnNewMeasure;
+        StereoRail_AudioManager.StopSongEvent -= ResetFirstMeasureBool;
+    }
+
+    void ResetFirstMeasureBool()
+    {
+        windupCounter = 0;
+        firstMeasureOfRiser = true;
     }
 
     private void OnNewMeasure(MusicState state)
@@ -45,9 +54,10 @@ public class WindupManager : MonoBehaviour
                     firstMeasureOfRiser = false;
                 }
                 AkSoundEngine.PostEvent("WindupTrigger", this.gameObject);
-                Debug.Log("WindupTrigger Triggered");
+                //Debug.Log("WindupTrigger Triggered");
                 
                 windupCounter++;
+
                 //Debug.Log(windupCounter);
                 //need to update droplength if the windup has been going on long enough
                 if (windupCounter == 8)
@@ -66,6 +76,7 @@ public class WindupManager : MonoBehaviour
             case MusicState.Filler:
                 //removing this reset so that you can continue streak even after failing to keep riser going
                 //windupCounter = 0;
+                windupCounter++;
                 firstMeasureOfRiser = true;
                 break;
             case MusicState.Drop:
@@ -81,9 +92,11 @@ public class WindupManager : MonoBehaviour
                 break;
             case MusicState.Groove:
                 windupCounter = 0;
+                firstMeasureOfRiser = true;
                 break;
         }
         audioManager.theWindupCounter = windupCounter;
+        //Debug.Log(audioManager.theWindupCounter);
     }
 
 

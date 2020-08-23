@@ -122,12 +122,17 @@ public class InteractionMachine : MonoBehaviour
     public bool dspRestingRight = true;
     #endregion
 
+    bool songPlaying;
 
     private void Start()
     {
+        songPlaying = false;
+        StereoRail_AudioManager.StartSongEvent += SongIsPlaying;
+
         StereoRail_AudioManager.NewMeasureEvent += MeasureCheck;
         StereoRail_AudioManager.TriggerDropEvent += DropEventReceived;
         StereoRail_AudioManager.WindupGestureRecieved += BeginInteraction;
+        StereoRail_AudioManager.StopSongEvent += ResetItAll;
 
         CenterDropSelect.SetActive(false);
         LeftDropSelect.SetActive(false);
@@ -223,11 +228,17 @@ public class InteractionMachine : MonoBehaviour
         #endregion
     }
 
+    void SongIsPlaying(SongName sName)
+    {
+        songPlaying = true;
+    }
+
     private void OnDestroy()
     {
         StereoRail_AudioManager.NewMeasureEvent -= MeasureCheck;
         StereoRail_AudioManager.TriggerDropEvent -= DropEventReceived;
         StereoRail_AudioManager.WindupGestureRecieved -= BeginInteraction;
+        StereoRail_AudioManager.StopSongEvent -= ResetItAll;
     }
 
     public void Update()
@@ -552,31 +563,35 @@ public class InteractionMachine : MonoBehaviour
 
     void DropEventReceived(DropColor dropColor, int dropLength)
     {
-        if (dropLength >= 16)
+        if (songPlaying)
         {
-            dspTriggeredCenter = true;
-            dspTriggeredLeft = true;
-            dspTriggeredRight = true;
-        }
-        else
-        {
-            /*
-             * Was thinking of having the pillars disappear if there's no dsp box, decided against it to keep the triggers where they are in peace
-            deactivateCenter = true;
-            deactivateLeft = true;
-            deactivateRight = true;
-            */
-        }
+            if (dropLength >= 16)
+            {
+                dspTriggeredCenter = true;
+                dspTriggeredLeft = true;
+                dspTriggeredRight = true;
+            }
+            else
+            {
+                /*
+                 * Was thinking of having the pillars disappear if there's no dsp box, decided against it to keep the triggers where they are in peace
+                deactivateCenter = true;
+                deactivateLeft = true;
+                deactivateRight = true;
+                */
+            }
 
-        CenterDropSelect.SetActive(false);
-        LeftDropSelect.SetActive(false);
-        RightDropSelect.SetActive(false);
+            CenterDropSelect.SetActive(false);
+            LeftDropSelect.SetActive(false);
+            RightDropSelect.SetActive(false);
+        }
     }
 
-    void BeginInteraction()
+    public void BeginInteraction()
     {
-        if (!StereoRail_AudioManager.Instance.tutorialPreventingDrop)
+        if (!StereoRail_AudioManager.Instance.tutorialPreventingDrop && songPlaying)
         {
+            //Debug.Log("Beginning that interaction.");
             machineHeight = Camera.main.transform.position.y*.7f;
             dspHeight = machineHeight + .7f;
             //reset all heights for new height
@@ -604,5 +619,13 @@ public class InteractionMachine : MonoBehaviour
             isTriggeredLeft = true;
             isTriggeredRight = true;
         }
+    }
+
+    void ResetItAll()
+    {
+        songPlaying = false;
+        deactivateCenter = true;
+        deactivateLeft = true;
+        deactivateRight = true;
     }
 }

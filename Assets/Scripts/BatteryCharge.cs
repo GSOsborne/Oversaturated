@@ -14,6 +14,7 @@ public class BatteryCharge : MonoBehaviour
     {
         audMan = StereoRail_AudioManager.Instance;
         StereoRail_AudioManager.NewMeasureEvent += Counter;
+        StereoRail_AudioManager.StopSongEvent += ResetBattery;
         windupCount = 0;
         dropCount = 0;
         foreach (GameObject level in levels)
@@ -37,9 +38,20 @@ public class BatteryCharge : MonoBehaviour
 
     }
 
+    void ResetBattery()
+    {
+        windupCount = 0;
+        dropCount = 0;
+        foreach (GameObject level in levels)
+        {
+            level.SetActive(false);
+        }
+    }
+
     private void OnDestroy()
     {
         StereoRail_AudioManager.NewMeasureEvent -= Counter;
+        StereoRail_AudioManager.StopSongEvent -= ResetBattery;
     }
 
     // Update is called once per frame
@@ -77,6 +89,7 @@ public class BatteryCharge : MonoBehaviour
             //Debug.Log("windup count is: " + windupCount);
             if (windupCount <= 16 && windupCount > 0)
             {
+                //Debug.Log("windup count is: " + windupCount);
                 levels[windupCount - 1].SetActive(true);
             }
         }

@@ -8,6 +8,8 @@ public class GestureTutorial : MonoBehaviour
     public GameObject firstWindupEncouragementObject;
     public GameObject windupComboEncouragementObject;
     public GameObject dropSelectEncouragementObject;
+    public InteractionMachine interactionMachine;
+    public OptimizedPanelManager opPanMan;
     //public GameObject finalRemindersObject;
 
     bool stageOnePassed;
@@ -74,6 +76,7 @@ public class GestureTutorial : MonoBehaviour
             if(windupCounter >= chargeRequirement - 1)
             {
                 StereoRail_AudioManager.Instance.tutorialPreventingDrop = false;
+
             }
             if (windupCounter >= chargeRequirement)
             {
@@ -103,6 +106,10 @@ public class GestureTutorial : MonoBehaviour
             firstWindupEncouragementObject.SetActive(false);
             windupComboEncouragementObject.SetActive(false);
             dropSelectEncouragementObject.SetActive(true);
+            //Debug.Log("Hey, we're gonna go ahead and just start the interaction manually.");
+            interactionMachine.BeginInteraction();
+            opPanMan.SummonDropOptions();
+            
 
         }
         else

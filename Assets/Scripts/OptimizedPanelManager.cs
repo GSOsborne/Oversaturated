@@ -8,6 +8,7 @@ public class OptimizedPanelManager : MonoBehaviour
     bool dropSelectionsActive;
     public GameObject[] dropSelections;
     OptimizedDropCharger[] dropSelectionChargers;
+    bool songPlaying;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,19 @@ public class OptimizedPanelManager : MonoBehaviour
         StereoRail_AudioManager.WindupGestureRecieved += SummonDropOptions;
         StereoRail_AudioManager.NewMeasureEvent += OnNewMeasure;
         StereoRail_AudioManager.DropGestureRecieved += TurnOffOptions;
+        StereoRail_AudioManager.StopSongEvent += SongStop;
+        StereoRail_AudioManager.StartSongEvent += SongStart;
+    }
+
+    void SongStart(SongName sName)
+    {
+        songPlaying = true;
+    }
+
+    void SongStop()
+    {
+        songPlaying = false;
+        TurnOffOptions();
     }
 
     private void OnDestroy()
@@ -30,12 +44,12 @@ public class OptimizedPanelManager : MonoBehaviour
         StereoRail_AudioManager.WindupGestureRecieved -= SummonDropOptions;
         StereoRail_AudioManager.NewMeasureEvent -= OnNewMeasure;
         StereoRail_AudioManager.DropGestureRecieved -= TurnOffOptions;
-
+        StereoRail_AudioManager.StopSongEvent -= SongStop;
     }
 
-    void SummonDropOptions()
+    public void SummonDropOptions()
     {
-        if (!StereoRail_AudioManager.Instance.tutorialPreventingDrop)
+        if (!StereoRail_AudioManager.Instance.tutorialPreventingDrop && songPlaying)
         {
             if (!dropSelectionsActive)
             {

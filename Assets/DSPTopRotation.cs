@@ -21,7 +21,7 @@ public class DSPTopRotation : MonoBehaviour
     {
         StopAllCoroutines();
         float currentY = trans.rotation.y;
-        trans.rotation = trans.rotation * Quaternion.Euler(0, (rtpcValue - 50f) / 75f, 0);
+        trans.rotation = trans.rotation * Quaternion.Euler(0, (rtpcValue - 50f) / 40f, 0);
 
     }
 

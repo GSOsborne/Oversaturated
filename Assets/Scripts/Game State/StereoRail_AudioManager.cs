@@ -37,6 +37,7 @@ public class StereoRail_AudioManager : MonoBehaviour {
     public bool addChainedWindup;
     public bool tutorialPreventingDrop;
     public bool tutorialActive;
+    bool briefWindupBan;
 
     public int theWindupCounter;
 
@@ -94,6 +95,7 @@ public class StereoRail_AudioManager : MonoBehaviour {
         tutorialPreventingDrop = false;
         tutorialActive = false;
         theWindupCounter = 0;
+        briefWindupBan = true;
 
     }
 
@@ -113,9 +115,15 @@ public class StereoRail_AudioManager : MonoBehaviour {
         DropGestureRecieved?.Invoke();
         Debug.Log("DropGestureRecieved!");
     }
+    
+    public void DebugStopSong()
+    {
+        StopSongEvent?.Invoke();
+    }
 
     void StoppingSongMusic()
     {
+        theWindupCounter = 0;
         AkSoundEngine.PostEvent("StopSong", gameObject);
     }
 
@@ -129,6 +137,15 @@ public class StereoRail_AudioManager : MonoBehaviour {
     public void DebugStartPaperclipSwarm()
     {
         StartSongEvent?.Invoke(SongName.PaperclipSwarm);
+    }
+
+    IEnumerator BriefWindupBanTimer()
+    {
+        //Debug.Log("Ban hammer brought down!");
+        briefWindupBan = true;
+        yield return new WaitForSeconds(.5f);
+        //Debug.Log("Should be all good now!");
+        briefWindupBan = false;
     }
 
 
@@ -152,6 +169,8 @@ public class StereoRail_AudioManager : MonoBehaviour {
         //startLevelEvent.Post(this.gameObject, (uint)AkCallbackType.AK_MusicSyncBar, DelayMeasureCheck);
         grooveManager.GrooveMeasure();
         Debug.Log("Started Level Music ideally");
+
+        StartCoroutine(BriefWindupBanTimer());
     }
 
     //-----------THE BUSINESS---------------
@@ -462,6 +481,11 @@ public class StereoRail_AudioManager : MonoBehaviour {
             default:
                 canYouWindup = false;
                 break;
+        }
+
+        if (briefWindupBan)
+        {
+            canYouWindup = false;
         }
 
         //alright, lets do it if you can
